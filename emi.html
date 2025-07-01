@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMI Calculator - Onley</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Easily calculate your EMI with Onley's EMI Calculator. Know your monthly loan payments quickly.">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <h1>Onley</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>EMI Calculator</h2>
+    <p>Calculate your monthly loan installment quickly and easily.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container">
+    <div class="card">
+
+      <label>Loan Amount (₹):</label>
+      <input type="number" id="loanAmount" placeholder="e.g. 500000">
+
+      <label>Annual Interest Rate (%):</label>
+      <input type="number" id="interestRate" placeholder="e.g. 8.5">
+
+      <label>Loan Tenure (in Years):</label>
+      <input type="number" id="tenureYears" placeholder="e.g. 5">
+
+      <button onclick="calculateEMI()">Calculate EMI</button>
+
+      <div id="result-emi" class="result"></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>FAQs</h2>
+
+    <details>
+      <summary>What is EMI?</summary>
+      <p>EMI (Equated Monthly Installment) is the monthly payment for a loan that includes both principal and interest.</p>
+    </details>
+
+    <details>
+      <summary>How is EMI calculated?</summary>
+      <p>It depends on loan amount, interest rate, and tenure using a standard EMI formula.</p>
+    </details>
+
+    <details>
+      <summary>Can I reduce my EMI?</summary>
+      <p>Yes, by increasing the tenure or choosing a lower interest rate.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
