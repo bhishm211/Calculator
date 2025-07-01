@@ -1,124 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Onley - Smart Calculators & Blogs</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Onley offers smart calculators like AC Bill Calculator, EMI, BMI, Fuel Cost, Age, YouTube Income along with helpful blogs to save your money.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onley - Smart Calculators for Modern Life</title>
+    <meta name="description" content="Free online calculators for AC bills, EMI, BMI, age, fuel cost, pregnancy due date, and YouTube income. Make informed decisions with our easy-to-use tools.">
+    <meta name="keywords" content="calculator, AC bill calculator, EMI calculator, BMI calculator, age calculator, fuel cost calculator, pregnancy calculator, YouTube income calculator">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
-
 <body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Onley Logo" width="120">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo">
-      <h1>Onley</h1>
-    </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="blogs.html">Blogs</a>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    </nav>
-  </div>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Smart Calculators for Modern Life</h1>
+            <p class="subheading">Make informed decisions with our easy-to-use, accurate calculators</p>
+            <a href="#calculators" class="cta-button">Explore Calculators</a>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h2>Smart Calculators & Guides</h2>
-    <p>Save Money. Save Electricity. Grow Financially Smarter.</p>
-  </div>
-</section>
+    <!-- Calculators Grid -->
+    <section id="calculators" class="calculators-grid section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Calculators</h2>
+            <div class="grid">
+                <a href="ac-bill.html" class="calculator-card">
+                    <img src="images/calculator-ac.jpg" alt="AC Bill Calculator">
+                    <h3>AC Bill Calculator</h3>
+                    <p>Estimate your air conditioning electricity costs</p>
+                </a>
+                <a href="emi.html" class="calculator-card">
+                    <img src="images/calculator-emi.jpg" alt="EMI Calculator">
+                    <h3>EMI Calculator</h3>
+                    <p>Calculate your loan Equated Monthly Installments</p>
+                </a>
+                <a href="bmi.html" class="calculator-card">
+                    <img src="images/calculator-bmi.jpg" alt="BMI Calculator">
+                    <h3>BMI Calculator</h3>
+                    <p>Check your Body Mass Index and health status</p>
+                </a>
+                <a href="age.html" class="calculator-card">
+                    <img src="images/calculator-age.jpg" alt="Age Calculator">
+                    <h3>Age Calculator</h3>
+                    <p>Find out your exact age in years, months and days</p>
+                </a>
+                <a href="fuel.html" class="calculator-card">
+                    <img src="images/calculator-fuel.jpg" alt="Fuel Cost Calculator">
+                    <h3>Fuel Cost Calculator</h3>
+                    <p>Calculate your trip's fuel expenses</p>
+                </a>
+                <a href="pregnancy.html" class="calculator-card">
+                    <img src="images/calculator-pregnancy.jpg" alt="Pregnancy Due Date Calculator">
+                    <h3>Pregnancy Calculator</h3>
+                    <p>Estimate your due date and pregnancy timeline</p>
+                </a>
+                <a href="youtube.html" class="calculator-card">
+                    <img src="images/calculator-youtube.jpg" alt="YouTube Income Calculator">
+                    <h3>YouTube Income Calculator</h3>
+                    <p>Estimate your potential YouTube earnings</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Calculator Section -->
-<section class="cards">
-  <div class="container">
+    <!-- Latest Blogs Section -->
+    <section class="latest-blogs section-padding">
+        <div class="container">
+            <h2 class="section-title">Latest Blogs</h2>
+            <div class="blog-cards">
+                <article class="blog-card">
+                    <img src="images/blog1.jpg" alt="How to Reduce Your AC Electricity Bill">
+                    <div class="blog-content">
+                        <h3><a href="blog1.html">How to Reduce Your AC Electricity Bill</a></h3>
+                        <p>Practical tips to keep your home cool without breaking the bank this summer.</p>
+                        <a href="blog1.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/blog2.jpg" alt="Understanding BMI and Your Health">
+                    <div class="blog-content">
+                        <h3><a href="blog2.html">Understanding BMI and Your Health</a></h3>
+                        <p>Learn what your BMI score really means and how it affects your overall health.</p>
+                        <a href="blog2.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/blog3.jpg" alt="Smart Ways to Manage Your Loans">
+                    <div class="blog-content">
+                        <h3><a href="blog3.html">Smart Ways to Manage Your Loans</a></h3>
+                        <p>Strategies to handle your EMIs effectively and reduce financial stress.</p>
+                        <a href="blog3.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center">
+                <a href="blogs.html" class="cta-button">View All Blogs</a>
+            </div>
+        </div>
+    </section>
 
-    <a href="ac-bill.html" class="card">
-      <img src="ac.png" alt="AC Bill">
-      <h3>AC Bill Calculator</h3>
-    </a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Onley Logo" width="120">
+                    <p>Onley provides free, accurate calculators to help you make informed decisions in your daily life.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="ac-bill.html">AC Bill Calculator</a></li>
+                        <li><a href="emi.html">EMI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@onley.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Onley. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <a href="emi.html" class="card">
-      <img src="emi.png" alt="EMI">
-      <h3>EMI Calculator</h3>
-    </a>
-
-    <a href="bmi.html" class="card">
-      <img src="bmi.png" alt="BMI">
-      <h3>BMI Calculator</h3>
-    </a>
-
-    <a href="age.html" class="card">
-      <img src="age.png" alt="Age">
-      <h3>Age Calculator</h3>
-    </a>
-
-    <a href="fuel.html" class="card">
-      <img src="fuel.png" alt="Fuel">
-      <h3>Fuel Cost Calculator</h3>
-    </a>
-
-    <a href="youtube.html" class="card">
-      <img src="youtube.png" alt="YouTube">
-      <h3>YouTube Income Calculator</h3>
-    </a>
-
-    <a href="pregnancy.html" class="card">
-      <img src="pregnancy.png" alt="Pregnancy">
-      <h3>Pregnancy Due Date Calculator</h3>
-    </a>
-
-  </div>
-</section>
-
-<!-- Blog Section -->
-<section class="blogs">
-  <div class="container">
-    <h2>Latest Blogs</h2>
-    <div class="blog-cards">
-
-      <a href="blog1.html" class="blog-card">
-        <img src="blog1.jpg" alt="Blog 1">
-        <h3>How to Reduce AC Electricity Bill</h3>
-      </a>
-
-      <a href="blog2.html" class="blog-card">
-        <img src="blog2.jpg" alt="Blog 2">
-        <h3>Inverter AC vs Non-Inverter AC</h3>
-      </a>
-
-      <a href="blog3.html" class="blog-card">
-        <img src="blog3.jpg" alt="Blog 3">
-        <h3>Power Consumption of 1.5 Ton AC</h3>
-      </a>
-
-      <a href="blog4.html" class="blog-card">
-        <img src="blog4.jpg" alt="Blog 4">
-        <h3>Best Energy Saving AC in 2025</h3>
-      </a>
-
-      <a href="blog5.html" class="blog-card">
-        <img src="blog5.jpg" alt="Blog 5">
-        <h3>How to Calculate AC Bill</h3>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer id="contact">
-  <div class="container">
-    <p>&copy; 2025 Onley | All Rights Reserved</p>
-    <p>Contact: onleyhelp@gmail.com</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
