@@ -8,6 +8,8 @@
     <meta name="keywords" content="calculator, AC bill calculator, EMI calculator, BMI calculator, age calculator, fuel cost calculator, pregnancy calculator, YouTube income calculator">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Sticky Header -->
@@ -20,6 +22,8 @@
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="#calculators">Calculators</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </nav>
             <button class="theme-toggle" aria-label="Toggle dark mode">
@@ -36,52 +40,218 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Smart Calculators for Modern Life</h1>
-            <p class="subheading">Make informed decisions with our easy-to-use, accurate calculators</p>
-            <a href="#calculators" class="cta-button">Explore Calculators</a>
+            <div class="hero-content">
+                <h1>Smart Calculators for <span class="highlight">Modern Life</span></h1>
+                <p class="subheading">Accurate, easy-to-use tools to help you make better financial, health and lifestyle decisions</p>
+                <div class="hero-buttons">
+                    <a href="#calculators" class="cta-button">Explore Calculators</a>
+                    <a href="#how-it-works" class="secondary-button">How It Works <i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-illustration.png" alt="Calculator Illustration">
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works section-padding">
+        <div class="container">
+            <h2 class="section-title">How Onley Calculators Work</h2>
+            <p class="section-subtitle">Three simple steps to get accurate results</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Enter Your Details</h3>
+                    <p>Fill in the required information in our simple, intuitive forms.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculate</h3>
+                    <p>Click the calculate button to process your information instantly.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Get Results</h3>
+                    <p>Receive accurate, detailed results to help you make decisions.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Calculators Grid -->
     <section id="calculators" class="calculators-grid section-padding">
         <div class="container">
-            <h2 class="section-title">Our Calculators</h2>
+            <h2 class="section-title">Our Popular Calculators</h2>
+            <p class="section-subtitle">Tools designed to make your life easier</p>
+            
             <div class="grid">
-                <a href="ac-bill.html" class="calculator-card">
-                    <img src="images/calculator-ac.jpg" alt="AC Bill Calculator">
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
                     <h3>AC Bill Calculator</h3>
-                    <p>Estimate your air conditioning electricity costs</p>
-                </a>
-                <a href="emi.html" class="calculator-card">
-                    <img src="images/calculator-emi.jpg" alt="EMI Calculator">
+                    <p>Estimate your air conditioning electricity costs based on usage patterns.</p>
+                    <a href="ac-bill.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
                     <h3>EMI Calculator</h3>
-                    <p>Calculate your loan Equated Monthly Installments</p>
-                </a>
-                <a href="bmi.html" class="calculator-card">
-                    <img src="images/calculator-bmi.jpg" alt="BMI Calculator">
+                    <p>Calculate your loan Equated Monthly Installments with ease.</p>
+                    <a href="emi.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
                     <h3>BMI Calculator</h3>
-                    <p>Check your Body Mass Index and health status</p>
-                </a>
-                <a href="age.html" class="calculator-card">
-                    <img src="images/calculator-age.jpg" alt="Age Calculator">
+                    <p>Check your Body Mass Index and understand your health status.</p>
+                    <a href="bmi.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
                     <h3>Age Calculator</h3>
-                    <p>Find out your exact age in years, months and days</p>
-                </a>
-                <a href="fuel.html" class="calculator-card">
-                    <img src="images/calculator-fuel.jpg" alt="Fuel Cost Calculator">
+                    <p>Find out your exact age in years, months and days.</p>
+                    <a href="age.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
                     <h3>Fuel Cost Calculator</h3>
-                    <p>Calculate your trip's fuel expenses</p>
-                </a>
-                <a href="pregnancy.html" class="calculator-card">
-                    <img src="images/calculator-pregnancy.jpg" alt="Pregnancy Due Date Calculator">
+                    <p>Calculate your trip's fuel expenses accurately.</p>
+                    <a href="fuel.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
                     <h3>Pregnancy Calculator</h3>
-                    <p>Estimate your due date and pregnancy timeline</p>
-                </a>
-                <a href="youtube.html" class="calculator-card">
-                    <img src="images/calculator-youtube.jpg" alt="YouTube Income Calculator">
+                    <p>Estimate your due date and pregnancy timeline.</p>
+                    <a href="pregnancy.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="card-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
                     <h3>YouTube Income Calculator</h3>
-                    <p>Estimate your potential YouTube earnings</p>
-                </a>
+                    <p>Estimate your potential YouTube earnings based on views.</p>
+                    <a href="youtube.html" class="card-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="calculator-card suggest-card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Suggest a Calculator</h3>
+                    <p>Have an idea for a new calculator? We'd love to hear it!</p>
+                    <a href="#contact" class="card-link">Suggest Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section section-padding">
+        <div class="container">
+            <div class="features-content">
+                <h2 class="section-title">Why Choose Onley Calculators?</h2>
+                <p class="section-subtitle">We're different from other calculator websites</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Lightning Fast</h3>
+                            <p>Get instant results without any waiting or processing time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Mobile Friendly</h3>
+                            <p>Works perfectly on all devices from smartphones to desktops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Privacy Focused</h3>
+                            <p>We don't store your data - all calculations happen in your browser.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Dark Mode</h3>
+                            <p>Eye-friendly dark theme for comfortable night-time use.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Detailed Results</h3>
+                            <p>Get more than just numbers - we provide insights and analysis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Completely Free</h3>
+                            <p>No hidden charges or premium tiers - all features are free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-image">
+                <img src="images/features-illustration.png" alt="Onley Features">
             </div>
         </div>
     </section>
@@ -89,35 +259,145 @@
     <!-- Latest Blogs Section -->
     <section class="latest-blogs section-padding">
         <div class="container">
-            <h2 class="section-title">Latest Blogs</h2>
+            <h2 class="section-title">Latest From Our Blog</h2>
+            <p class="section-subtitle">Helpful articles to guide your decisions</p>
+            
             <div class="blog-cards">
                 <article class="blog-card">
-                    <img src="images/blog1.jpg" alt="How to Reduce Your AC Electricity Bill">
+                    <div class="blog-image">
+                        <img src="images/blog1.jpg" alt="How to Reduce Your AC Electricity Bill">
+                        <div class="blog-date">Jun 15, 2023</div>
+                    </div>
                     <div class="blog-content">
+                        <div class="blog-category">Energy Savings</div>
                         <h3><a href="blog1.html">How to Reduce Your AC Electricity Bill</a></h3>
                         <p>Practical tips to keep your home cool without breaking the bank this summer.</p>
-                        <a href="blog1.html" class="read-more">Read More</a>
+                        <div class="blog-footer">
+                            <a href="blog1.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <span class="read-time">5 min read</span>
+                        </div>
                     </div>
                 </article>
+                
                 <article class="blog-card">
-                    <img src="images/blog2.jpg" alt="Understanding BMI and Your Health">
+                    <div class="blog-image">
+                        <img src="images/blog2.jpg" alt="Understanding BMI and Your Health">
+                        <div class="blog-date">May 28, 2023</div>
+                    </div>
                     <div class="blog-content">
+                        <div class="blog-category">Health</div>
                         <h3><a href="blog2.html">Understanding BMI and Your Health</a></h3>
                         <p>Learn what your BMI score really means and how it affects your overall health.</p>
-                        <a href="blog2.html" class="read-more">Read More</a>
+                        <div class="blog-footer">
+                            <a href="blog2.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <span class="read-time">7 min read</span>
+                        </div>
                     </div>
                 </article>
+                
                 <article class="blog-card">
-                    <img src="images/blog3.jpg" alt="Smart Ways to Manage Your Loans">
+                    <div class="blog-image">
+                        <img src="images/blog3.jpg" alt="Smart Ways to Manage Your Loans">
+                        <div class="blog-date">May 10, 2023</div>
+                    </div>
                     <div class="blog-content">
+                        <div class="blog-category">Finance</div>
                         <h3><a href="blog3.html">Smart Ways to Manage Your Loans</a></h3>
                         <p>Strategies to handle your EMIs effectively and reduce financial stress.</p>
-                        <a href="blog3.html" class="read-more">Read More</a>
+                        <div class="blog-footer">
+                            <a href="blog3.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <span class="read-time">6 min read</span>
+                        </div>
                     </div>
                 </article>
             </div>
+            
             <div class="text-center">
-                <a href="blogs.html" class="cta-button">View All Blogs</a>
+                <a href="blogs.html" class="cta-button">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <p class="section-subtitle">Trusted by thousands of users worldwide</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The AC bill calculator helped me understand my electricity consumption and save over 20% on my monthly bills. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="Rahul Sharma">
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <span>Mumbai, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"As a financial advisor, I regularly use the EMI calculator with my clients. It's accurate and provides all the details we need for loan planning."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="Priya Patel">
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <span>Financial Advisor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"The pregnancy calculator was spot on with my due date! It's wonderful to have such reliable tools available for free."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Expecting Mother</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make Smarter Decisions?</h2>
+                <p>Join thousands of users who trust Onley calculators for accurate, instant results.</p>
+                <div class="cta-buttons">
+                    <a href="#calculators" class="cta-button">Try Our Calculators</a>
+                    <a href="blogs.html" class="secondary-button">Read Our Blogs</a>
+                </div>
             </div>
         </div>
     </section>
@@ -127,31 +407,57 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <img src="images/logo.png" alt="Onley Logo" width="120">
+                    <img src="images/logo-white.png" alt="Onley Logo" width="120">
                     <p>Onley provides free, accurate calculators to help you make informed decisions in your daily life.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="ac-bill.html">AC Bill Calculator</a></li>
-                        <li><a href="emi.html">EMI Calculator</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@onley.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">FB</a>
-                        <a href="#" aria-label="Twitter">TW</a>
-                        <a href="#" aria-label="Instagram">IG</a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+                
+                <div class="footer-links">
+                    <h3>Calculators</h3>
+                    <ul>
+                        <li><a href="ac-bill.html">AC Bill Calculator</a></li>
+                        <li><a href="emi.html">EMI Calculator</a></li>
+                        <li><a href="bmi.html">BMI Calculator</a></li>
+                        <li><a href="age.html">Age Calculator</a></li>
+                        <li><a href="fuel.html">Fuel Cost Calculator</a></li>
+                        <li><a href="pregnancy.html">Pregnancy Calculator</a></li>
+                        <li><a href="youtube.html">YouTube Income Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Calculator Street, Mathville</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@onley.com</li>
+                    </ul>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2023 Onley. All rights reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
