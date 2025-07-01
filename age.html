@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Age Calculator - Onley</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator – Onley</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Easily calculate your exact age with Onley's Age Calculator. Find out your age in years, months, and days.">
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Calculate your exact age with Onley's free Age Calculator.">
 </head>
 
 <body>
@@ -14,11 +14,12 @@
 <header>
   <div class="container">
     <div class="logo-area">
-      <img src="logo.png" alt="Logo">
+      <img src="images/logo.png" alt="Onley Logo">
       <h1>Onley</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="calculators.html" class="active">Calculators</a>
       <a href="blogs.html">Blogs</a>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </nav>
@@ -28,48 +29,22 @@
 <section class="hero">
   <div class="container">
     <h2>Age Calculator</h2>
-    <p>Calculate your exact age in years, months, and days.</p>
+    <p>Find out your exact age in years, months, and days.</p>
   </div>
 </section>
 
-<section class="calculator-section">
+<section>
   <div class="container">
-    <div class="card">
+    <label>Date of Birth:</label>
+    <input type="date" id="age-dob">
 
-      <label>Enter Your Date of Birth:</label>
-      <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate</button>
 
-      <button onclick="calculateAge()">Calculate Age</button>
-
-      <div id="result-age" class="result"></div>
-
-    </div>
+    <div id="age-result"></div>
   </div>
 </section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2>FAQs</h2>
-
-    <details>
-      <summary>How does this age calculator work?</summary>
-      <p>It calculates your age based on the difference between your date of birth and today.</p>
-    </details>
-
-    <details>
-      <summary>Can I calculate age for any date?</summary>
-      <p>Yes, enter any date of birth to calculate the exact age.</p>
-    </details>
-
-    <details>
-      <summary>Does it show months and days?</summary>
-      <p>Yes, it shows your age in years, months, and days.</p>
-    </details>
-
-  </div>
-</section>
-
-<footer id="contact">
+<footer>
   <div class="container">
     <p>&copy; 2025 Onley | All Rights Reserved</p>
     <p>Contact: onleyhelp@gmail.com</p>
