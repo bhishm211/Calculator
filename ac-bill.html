@@ -1,109 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AC Bill Calculator - Onley</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Calculate your AC electricity bill easily with Onley AC Bill Calculator. Save money by knowing how much your AC consumes.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Bill Calculator - Onley</title>
+    <meta name="description" content="Calculate your air conditioning electricity costs with our free AC Bill Calculator. Estimate your monthly and annual expenses.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png">
 </head>
-
 <body>
+    <!-- Sticky Header (same as index.html) -->
+    <header class="sticky-header">
+        <!-- Same header content as index.html -->
+    </header>
 
-<header>
-  <div class="container">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo">
-      <h1>Onley</h1>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blogs.html">Blogs</a>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    </nav>
-  </div>
-</header>
+    <!-- Calculator Hero -->
+    <section class="calculator-hero">
+        <div class="container">
+            <h1>AC Bill Calculator</h1>
+            <p>Estimate your air conditioning electricity costs based on usage patterns and local rates</p>
+        </div>
+    </section>
 
-<section class="hero">
-  <div class="container">
-    <h2>AC Bill Calculator</h2>
-    <p>Check how much electricity your AC consumes monthly or yearly.</p>
-  </div>
-</section>
+    <!-- Calculator Section -->
+    <section class="calculator-section section-padding">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="ac-type">AC Type</label>
+                        <select id="ac-type" class="form-control">
+                            <option value="1.5">1.5 Ton (Approx. 1.5 kW)</option>
+                            <option value="1">1 Ton (Approx. 1 kW)</option>
+                            <option value="2">2 Ton (Approx. 2 kW)</option>
+                            <option value="0.75">Window AC (0.75 kW)</option>
+                            <option value="custom">Custom Power Rating</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="custom-power-group" style="display: none;">
+                        <label for="custom-power">Custom Power Rating (in kW)</label>
+                        <input type="number" id="custom-power" class="form-control" min="0.1" step="0.1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="usage-hours">Daily Usage (hours)</label>
+                        <input type="number" id="usage-hours" class="form-control" min="1" max="24" value="8">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="days-per-month">Days Used Per Month</label>
+                        <input type="number" id="days-per-month" class="form-control" min="1" max="31" value="30">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="electricity-rate">Electricity Rate (per kWh in $)</label>
+                        <input type="number" id="electricity-rate" class="form-control" min="0.01" step="0.01" value="0.12">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inverter">AC Type</label>
+                        <select id="inverter" class="form-control">
+                            <option value="1">Regular AC</option>
+                            <option value="0.6">Inverter AC (40% more efficient)</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calculate-btn" class="cta-button">Calculate Bill</button>
+                    <button id="reset-btn" class="secondary-button">Reset</button>
+                </div>
+                
+                <div class="calculator-results">
+                    <h3>Your AC Electricity Costs</h3>
+                    <div class="result-item">
+                        <span class="result-label">Daily Cost:</span>
+                        <span id="daily-cost" class="result-value">$0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Monthly Cost:</span>
+                        <span id="monthly-cost" class="result-value">$0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Annual Cost:</span>
+                        <span id="annual-cost" class="result-value">$0.00</span>
+                    </div>
+                    
+                    <div class="savings-tips">
+                        <h4>Ways to Reduce Your AC Bill</h4>
+                        <ul>
+                            <li>Increase thermostat by 1°F to save 3%</li>
+                            <li>Use ceiling fans to feel 4°F cooler</li>
+                            <li>Clean filters monthly for better efficiency</li>
+                            <li>Consider an inverter AC for long usage</li>
+                        </ul>
+                        <a href="../blog1.html" class="read-more">Read our AC savings guide</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator-info">
+                <h3>How the AC Bill Calculator Works</h3>
+                <p>This calculator estimates your air conditioning electricity costs based on:</p>
+                <ol>
+                    <li><strong>AC Power Consumption:</strong> Measured in kilowatts (kW) based on AC tonnage</li>
+                    <li><strong>Usage Duration:</strong> How many hours per day and days per month you use the AC</li>
+                    <li><strong>Electricity Rate:</strong> Your local cost per kilowatt-hour (kWh)</li>
+                    <li><strong>AC Type:</strong> Regular or more efficient inverter models</li>
+                </ol>
+                <p>The formula used is: <strong>Cost = Power (kW) × Hours × Days × Rate × Efficiency Factor</strong></p>
+                <p>For more accurate results, check your AC's exact power rating (usually found on the nameplate) and your electricity bill for the exact rate you pay.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="calculator-section">
-  <div class="container">
-    <div class="card">
+    <!-- Footer (same as index.html) -->
+    <footer class="site-footer">
+        <!-- Same footer content as index.html -->
+    </footer>
 
-      <label>Select AC Brand:</label>
-      <select id="brand">
-        <option value="Generic">Generic</option>
-        <option value="LG">LG</option>
-        <option value="Samsung">Samsung</option>
-        <option value="Voltas">Voltas</option>
-        <option value="Daikin">Daikin</option>
-      </select>
-
-      <label>AC Capacity (Tons):</label>
-      <input type="range" min="0.8" max="2" step="0.1" value="1.5" id="capacity" oninput="document.getElementById('capVal').innerHTML=this.value + ' Ton'">
-      <div><b>Selected:</b> <span id="capVal">1.5 Ton</span></div>
-
-      <label>Star Rating:</label>
-      <div class="stars">
-        <button onclick="setStar(1)">★</button>
-        <button onclick="setStar(2)">★★</button>
-        <button onclick="setStar(3)">★★★</button>
-        <button onclick="setStar(4)">★★★★</button>
-        <button onclick="setStar(5)">★★★★★</button>
-      </div>
-
-      <label>Hours Per Day:</label>
-      <input type="number" id="hours" placeholder="e.g. 8">
-
-      <label>Number of Days:</label>
-      <input type="number" id="days" placeholder="e.g. 30">
-
-      <label>Electricity Rate (₹/Unit):</label>
-      <input type="number" id="rate" placeholder="e.g. 8">
-
-      <button onclick="calculateAC()">Calculate Bill</button>
-
-      <div id="result-ac" class="result"></div>
-
-    </div>
-  </div>
-</section>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>FAQs</h2>
-
-    <details>
-      <summary>How do I calculate AC electricity bill?</summary>
-      <p>Use this calculator by entering AC capacity, hours of usage, days, and electricity rate.</p>
-    </details>
-
-    <details>
-      <summary>What is the best temperature to save electricity?</summary>
-      <p>Maintain 24-26°C for optimal savings.</p>
-    </details>
-
-    <details>
-      <summary>Is Inverter AC better than normal AC?</summary>
-      <p>Yes, inverter AC saves 30-40% more power.</p>
-    </details>
-
-  </div>
-</section>
-
-<footer id="contact">
-  <div class="container">
-    <p>&copy; 2025 Onley | All Rights Reserved</p>
-    <p>Contact: onleyhelp@gmail.com</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // AC Bill Calculator Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const acTypeSelect = document.getElementById('ac-type');
+            const customPowerGroup = document.getElementById('custom-power-group');
+            const customPowerInput = document.getElementById('custom-power');
+            const usageHoursInput = document.getElementById('usage-hours');
+            const daysPerMonthInput = document.getElementById('days-per-month');
+            const electricityRateInput = document.getElementById('electricity-rate');
+            const inverterSelect = document.getElementById('inverter');
+            const calculateBtn = document.getElementById('calculate-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const dailyCostElement = document.getElementById('daily-cost');
+            const monthlyCostElement = document.getElementById('monthly-cost');
+            const annualCostElement = document.getElementById('annual-cost');
+            
+            // Toggle custom power input
+            acTypeSelect.addEventListener('change', function() {
+                if (this.value === 'custom') {
+                    customPowerGroup.style.display = 'block';
+                } else {
+                    customPowerGroup.style.display = 'none';
+                }
+            });
+            
+            // Calculate function
+            function calculateACBill() {
+                let powerRating;
+                if (acTypeSelect.value === 'custom') {
+                    powerRating = parseFloat(customPowerInput.value) || 1;
+                } else {
+                    powerRating = parseFloat(acTypeSelect.value);
+                }
+                
+                const usageHours = parseFloat(usageHoursInput.value) || 0;
+                const daysPerMonth = parseFloat(daysPerMonthInput.value) || 0;
+                const electricityRate = parseFloat(electricityRateInput.value) || 0;
+                const inverterFactor = parseFloat(inverterSelect.value) || 1;
+                
+                // Calculations
+                const dailyCost = powerRating * usageHours * electricityRate * inverterFactor;
+                const monthlyCost = dailyCost * daysPerMonth;
+                const annualCost = monthlyCost * 12;
+                
+                // Display results
+                dailyCostElement.textContent = '$' + dailyCost.toFixed(2);
+                monthlyCostElement.textContent = '$' + monthlyCost.toFixed(2);
+                annualCostElement.textContent = '$' + annualCost.toFixed(2);
+            }
+            
+            // Reset function
+            function resetCalculator() {
+                acTypeSelect.value = '1.5';
+                customPowerGroup.style.display = 'none';
+                customPowerInput.value = '';
+                usageHoursInput.value = '8';
+                daysPerMonthInput.value = '30';
+                electricityRateInput.value = '0.12';
+                inverterSelect.value = '1';
+                
+                dailyCostElement.textContent = '$0.00';
+                monthlyCostElement.textContent = '$0.00';
+                annualCostElement.textContent = '$0.00';
+            }
+            
+            // Event listeners
+            calculateBtn.addEventListener('click', calculateACBill);
+            resetBtn.addEventListener('click', resetCalculator);
+            
+            // Calculate on Enter key
+            document.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    calculateACBill();
+                }
+            });
+            
+            // Initial calculation
+            calculateACBill();
+        });
+    </script>
 </body>
 </html>
