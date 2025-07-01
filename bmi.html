@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator - Onley</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Easily calculate your Body Mass Index (BMI) with Onley's BMI Calculator. Check if your weight is healthy.">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <h1>Onley</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>BMI Calculator</h2>
+    <p>Check if your weight is healthy based on your height.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container">
+    <div class="card">
+
+      <label>Height (in cm):</label>
+      <input type="number" id="height" placeholder="e.g. 170">
+
+      <label>Weight (in kg):</label>
+      <input type="number" id="weight" placeholder="e.g. 65">
+
+      <button onclick="calculateBMI()">Calculate BMI</button>
+
+      <div id="result-bmi" class="result"></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>FAQs</h2>
+
+    <details>
+      <summary>What is BMI?</summary>
+      <p>BMI (Body Mass Index) indicates whether your weight is healthy according to your height.</p>
+    </details>
+
+    <details>
+      <summary>What is a healthy BMI?</summary>
+      <p>A BMI between 18.5 and 24.9 is considered healthy.</p>
+    </details>
+
+    <details>
+      <summary>Does BMI apply to all?</summary>
+      <p>BMI is a general guideline and may not be accurate for athletes, pregnant women, or highly muscular people.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
