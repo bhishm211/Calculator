@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onley - All in One Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onley - All in One Calculator</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Onley 🔥</h1>
-            <nav>
-                <a href="#calculators">Calculators</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1><img src="logo.png" alt="Logo" class="logo"> Onley 🔥</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Smart Calculators for Daily Life</h2>
-            <p>AC Bill | EMI | BMI | Age | Fuel Cost | YouTube Income & More</p>
-            <a href="#calculators" class="cta-btn">Start Calculating</a>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h2>All-in-One Smart Calculator</h2>
+      <p>AC Bill | EMI | BMI | Age | Fuel | YouTube Income | Pregnancy & More</p>
+    </div>
+  </section>
 
-    <section id="calculators" class="calculators">
-        <div class="container">
-            <h2>AC Bill Calculator</h2>
-            <div class="card">
-                <label>AC Power (kW):</label>
-                <input type="number" id="power" placeholder="e.g. 1.5">
-                <label>Hours per Day:</label>
-                <input type="number" id="hours" placeholder="e.g. 8">
-                <label>Days:</label>
-                <input type="number" id="days" placeholder="e.g. 30">
-                <label>Electricity Rate (₹/Unit):</label>
-                <input type="number" id="rate" placeholder="e.g. 8">
-                <button onclick="calculateAC()">Calculate</button>
-                <div id="result-ac" class="result"></div>
-            </div>
-        </div>
-    </section>
+  <section class="calculators">
+    <div class="container">
+      <div class="calc-grid">
+        <a href="ac-bill.html" class="calc-card">
+          <img src="ac.png" alt="AC">
+          <span>AC Bill Calculator</span>
+        </a>
+        <a href="emi.html" class="calc-card">
+          <img src="emi.png" alt="EMI">
+          <span>EMI Calculator</span>
+        </a>
+        <a href="bmi.html" class="calc-card">
+          <img src="bmi.png" alt="BMI">
+          <span>BMI Calculator</span>
+        </a>
+        <a href="age.html" class="calc-card">
+          <img src="age.png" alt="Age">
+          <span>Age Calculator</span>
+        </a>
+        <a href="fuel.html" class="calc-card">
+          <img src="fuel.png" alt="Fuel">
+          <span>Fuel Cost Calculator</span>
+        </a>
+        <a href="youtube.html" class="calc-card">
+          <img src="youtube.png" alt="YouTube">
+          <span>YouTube Income Calculator</span>
+        </a>
+        <a href="pregnancy.html" class="calc-card">
+          <img src="pregnancy.png" alt="Pregnancy">
+          <span>Pregnancy Due Date</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Onley</h2>
-            <p>Onley is a smart calculator website designed to make your daily calculations easier, faster, and accurate. Whether it's your AC bill, EMI, BMI, or age, we've got you covered.</p>
-        </div>
-    </section>
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Onley</h2>
+      <p>Onley is your all-in-one smart calculator website. From managing your electricity bill to tracking your BMI or EMI, we provide instant, reliable, and user-friendly calculators for everyday needs.</p>
+    </div>
+  </section>
 
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2025 Onley | All rights reserved</p>
-        </div>
-    </footer>
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2025 Onley | All Rights Reserved</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
