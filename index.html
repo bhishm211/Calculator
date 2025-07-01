@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Onley - All in One Calculator Website. AC Bill, EMI, BMI, Age, Fuel Cost & More.">
+    <meta name="keywords" content="Calculator, AC Bill, EMI, BMI, Age Calculator, Fuel Cost, YouTube Money, Pregnancy Due Date">
+    <meta name="author" content="Onley">
+    <meta property="og:title" content="Onley - All in One Calculator">
+    <meta property="og:description" content="Fast, Free & Accurate Calculators for AC Bill, EMI, BMI, Age, Fuel Cost, and More.">
+    <meta property="og:image" content="https://onley.netlify.app/og-image.jpg">
+    <meta property="og:url" content="https://onley.netlify.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Onley - All in One Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --accent-color: #4CAF50;
+            --card-color: #f4f4f4;
+        }
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --accent-color: #00e676;
+            --card-color: #1e1e1e;
+        }
+        body {
+            margin: 0; font-family: 'Segoe UI', sans-serif;
+            background: var(--bg-color); color: var(--text-color);
+        }
+        .header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 20px; background: var(--card-color);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: var(--accent-color); }
+        .navbar a {
+            margin: 0 10px; text-decoration: none; color: var(--text-color);
+            font-weight: 500;
+        }
+        .theme-toggle { cursor: pointer; font-size: 1.2rem; }
+        .hero {
+            padding: 80px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; }
+        .hero p { font-size: 1.1rem; margin: 10px 0; }
+        .cta {
+            display: inline-block; background: var(--accent-color); color: white;
+            padding: 10px 20px; border-radius: 25px; text-decoration: none; margin-top: 20px;
+        }
+        .calc-grid, .blog-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px; padding: 40px 20px;
+        }
+        .calc-card, .blog-card {
+            background: var(--card-color); padding: 20px; border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .calc-card:hover, .blog-card:hover { transform: translateY(-5px); }
+        .footer {
+            background: var(--card-color); padding: 20px; text-align: center;
+        }
+        .notification {
+            position: fixed; top: 10px; right: 10px; background: var(--accent-color);
+            color: white; padding: 8px 15px; border-radius: 25px; display: none;
+        }
+        .chat-widget {
+            position: fixed; bottom: 20px; right: 20px; background: var(--card-color);
+            border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            width: 280px;
+        }
+        .chat-header {
+            background: var(--accent-color); color: white;
+            padding: 10px; border-radius: 10px 10px 0 0;
+        }
+        .chat-body { padding: 10px; }
+        .chat-body input {
+            width: 100%; padding: 8px; border: none; border-radius: 5px;
+            margin-top: 10px; background: var(--bg-color); color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="notification" id="notify">🚀 Someone just calculated EMI from Delhi</div>
+    <header class="header">
+        <div class="logo">Onley</div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#calculators">Calculators</a>
+            <a href="#blogs">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Onley - All in One Smart Calculator</h1>
+        <p>AC Bill, EMI, Age, BMI, Fuel Cost, YouTube Earning & More</p>
+        <a href="#calculators" class="cta">Start Calculating</a>
+    </section>
+
+    <section id="calculators" class="calculators">
+        <h2>Smart Calculators</h2>
+        <div class="calc-grid">
+            <div class="calc-card">AC Bill Calculator</div>
+            <div class="calc-card">EMI Calculator</div>
+            <div class="calc-card">BMI Calculator</div>
+            <div class="calc-card">Age Calculator</div>
+            <div class="calc-card">Fuel Cost Calculator</div>
+            <div class="calc-card">YouTube Earning Calculator</div>
+            <div class="calc-card">Pregnancy Due Date Calculator</div>
+            <div class="calc-card">Unit Converter</div>
+        </div>
+    </section>
+
+    <section id="blogs" class="blogs">
+        <h2>Latest Blogs</h2>
+        <div class="blog-grid">
+            <div class="blog-card">Save Electricity with Smart AC Use</div>
+            <div class="blog-card">Health Benefits of Knowing Your BMI</div>
+            <div class="blog-card">How to Plan Loan with EMI Calculator</div>
+            <div class="blog-card">Increase YouTube Income with Smart Tips</div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Onley | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <div class="chat-header">💬 Chat with us</div>
+        <div class="chat-body">
+            <p>Hi! How can I help you today?</p>
+            <input type="text" placeholder="Type a message...">
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            if (currentTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "light");
+            } else {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        }
+
+        function showNotification() {
+            const notify = document.getElementById('notify');
+            notify.style.display = 'block';
+            setTimeout(() => {
+                notify.style.display = 'none';
+            }, 5000);
+        }
+
+        setInterval(showNotification, 15000);
+    </script>
+</body>
+</html>
