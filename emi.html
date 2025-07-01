@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EMI Calculator - Onley</title>
+  <title>EMI Calculator – Onley</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Easily calculate your EMI with Onley's EMI Calculator. Know your monthly loan payments quickly.">
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Calculate your monthly EMI using Onley's EMI Calculator.">
 </head>
 
 <body>
@@ -14,11 +14,12 @@
 <header>
   <div class="container">
     <div class="logo-area">
-      <img src="logo.png" alt="Logo">
+      <img src="images/logo.png" alt="Onley Logo">
       <h1>Onley</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="calculators.html" class="active">Calculators</a>
       <a href="blogs.html">Blogs</a>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </nav>
@@ -28,54 +29,28 @@
 <section class="hero">
   <div class="container">
     <h2>EMI Calculator</h2>
-    <p>Calculate your monthly loan installment quickly and easily.</p>
+    <p>Calculate your loan EMI, interest and total payment.</p>
   </div>
 </section>
 
-<section class="calculator-section">
+<section>
   <div class="container">
-    <div class="card">
+    <label>Loan Amount (₹):</label>
+    <input type="number" id="emi-loan" placeholder="e.g. 500000">
 
-      <label>Loan Amount (₹):</label>
-      <input type="number" id="loanAmount" placeholder="e.g. 500000">
+    <label>Annual Interest Rate (%):</label>
+    <input type="number" id="emi-rate" placeholder="e.g. 10">
 
-      <label>Annual Interest Rate (%):</label>
-      <input type="number" id="interestRate" placeholder="e.g. 8.5">
+    <label>Loan Tenure (Months):</label>
+    <input type="number" id="emi-months" placeholder="e.g. 60">
 
-      <label>Loan Tenure (in Years):</label>
-      <input type="number" id="tenureYears" placeholder="e.g. 5">
+    <button onclick="calculateEMI()">Calculate</button>
 
-      <button onclick="calculateEMI()">Calculate EMI</button>
-
-      <div id="result-emi" class="result"></div>
-
-    </div>
+    <div id="emi-result"></div>
   </div>
 </section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2>FAQs</h2>
-
-    <details>
-      <summary>What is EMI?</summary>
-      <p>EMI (Equated Monthly Installment) is the monthly payment for a loan that includes both principal and interest.</p>
-    </details>
-
-    <details>
-      <summary>How is EMI calculated?</summary>
-      <p>It depends on loan amount, interest rate, and tenure using a standard EMI formula.</p>
-    </details>
-
-    <details>
-      <summary>Can I reduce my EMI?</summary>
-      <p>Yes, by increasing the tenure or choosing a lower interest rate.</p>
-    </details>
-
-  </div>
-</section>
-
-<footer id="contact">
+<footer>
   <div class="container">
     <p>&copy; 2025 Onley | All Rights Reserved</p>
     <p>Contact: onleyhelp@gmail.com</p>
