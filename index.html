@@ -3,79 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Onley - All in One Calculator</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Onley - Smart Calculators & Blogs</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Onley offers smart calculators like AC Bill Calculator, EMI, BMI, Fuel Cost, Age, YouTube Income along with helpful blogs to save your money.">
 </head>
+
 <body>
 
-  <header>
-    <div class="container">
-      <h1><img src="logo.png" alt="Logo" class="logo"> Onley 🔥</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-      </nav>
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <h1>Onley</h1>
     </div>
-  </header>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>All-in-One Smart Calculator</h2>
-      <p>AC Bill | EMI | BMI | Age | Fuel | YouTube Income | Pregnancy & More</p>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h2>Smart Calculators & Guides</h2>
+    <p>Save Money. Save Electricity. Grow Financially Smarter.</p>
+  </div>
+</section>
+
+<!-- Calculator Section -->
+<section class="cards">
+  <div class="container">
+
+    <a href="ac-bill.html" class="card">
+      <img src="ac.png" alt="AC Bill">
+      <h3>AC Bill Calculator</h3>
+    </a>
+
+    <a href="emi.html" class="card">
+      <img src="emi.png" alt="EMI">
+      <h3>EMI Calculator</h3>
+    </a>
+
+    <a href="bmi.html" class="card">
+      <img src="bmi.png" alt="BMI">
+      <h3>BMI Calculator</h3>
+    </a>
+
+    <a href="age.html" class="card">
+      <img src="age.png" alt="Age">
+      <h3>Age Calculator</h3>
+    </a>
+
+    <a href="fuel.html" class="card">
+      <img src="fuel.png" alt="Fuel">
+      <h3>Fuel Cost Calculator</h3>
+    </a>
+
+    <a href="youtube.html" class="card">
+      <img src="youtube.png" alt="YouTube">
+      <h3>YouTube Income Calculator</h3>
+    </a>
+
+    <a href="pregnancy.html" class="card">
+      <img src="pregnancy.png" alt="Pregnancy">
+      <h3>Pregnancy Due Date Calculator</h3>
+    </a>
+
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blogs">
+  <div class="container">
+    <h2>Latest Blogs</h2>
+    <div class="blog-cards">
+
+      <a href="blog1.html" class="blog-card">
+        <img src="blog1.jpg" alt="Blog 1">
+        <h3>How to Reduce AC Electricity Bill</h3>
+      </a>
+
+      <a href="blog2.html" class="blog-card">
+        <img src="blog2.jpg" alt="Blog 2">
+        <h3>Inverter AC vs Non-Inverter AC</h3>
+      </a>
+
+      <a href="blog3.html" class="blog-card">
+        <img src="blog3.jpg" alt="Blog 3">
+        <h3>Power Consumption of 1.5 Ton AC</h3>
+      </a>
+
+      <a href="blog4.html" class="blog-card">
+        <img src="blog4.jpg" alt="Blog 4">
+        <h3>Best Energy Saving AC in 2025</h3>
+      </a>
+
+      <a href="blog5.html" class="blog-card">
+        <img src="blog5.jpg" alt="Blog 5">
+        <h3>How to Calculate AC Bill</h3>
+      </a>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="calculators">
-    <div class="container">
-      <div class="calc-grid">
-        <a href="ac-bill.html" class="calc-card">
-          <img src="ac.png" alt="AC">
-          <span>AC Bill Calculator</span>
-        </a>
-        <a href="emi.html" class="calc-card">
-          <img src="emi.png" alt="EMI">
-          <span>EMI Calculator</span>
-        </a>
-        <a href="bmi.html" class="calc-card">
-          <img src="bmi.png" alt="BMI">
-          <span>BMI Calculator</span>
-        </a>
-        <a href="age.html" class="calc-card">
-          <img src="age.png" alt="Age">
-          <span>Age Calculator</span>
-        </a>
-        <a href="fuel.html" class="calc-card">
-          <img src="fuel.png" alt="Fuel">
-          <span>Fuel Cost Calculator</span>
-        </a>
-        <a href="youtube.html" class="calc-card">
-          <img src="youtube.png" alt="YouTube">
-          <span>YouTube Income Calculator</span>
-        </a>
-        <a href="pregnancy.html" class="calc-card">
-          <img src="pregnancy.png" alt="Pregnancy">
-          <span>Pregnancy Due Date</span>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- Footer -->
+<footer id="contact">
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
 
-  <section class="about" id="about">
-    <div class="container">
-      <h2>About Onley</h2>
-      <p>Onley is your all-in-one smart calculator website. From managing your electricity bill to tracking your BMI or EMI, we provide instant, reliable, and user-friendly calculators for everyday needs.</p>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <div class="container">
-      <p>&copy; 2025 Onley | All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
