@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YouTube Income Calculator - Onley</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Money Calculator – Onley</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Estimate your YouTube earnings with Onley's YouTube Income Calculator based on views, RPM, and niche.">
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Estimate YouTube income based on views & RPM with Onley's YouTube Money Calculator.">
 </head>
 
 <body>
@@ -14,11 +14,12 @@
 <header>
   <div class="container">
     <div class="logo-area">
-      <img src="logo.png" alt="Logo">
+      <img src="images/logo.png" alt="Onley Logo">
       <h1>Onley</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="calculators.html" class="active">Calculators</a>
       <a href="blogs.html">Blogs</a>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </nav>
@@ -28,51 +29,25 @@
 <section class="hero">
   <div class="container">
     <h2>YouTube Income Calculator</h2>
-    <p>Estimate how much money you can earn from YouTube views based on RPM.</p>
+    <p>Estimate your YouTube earnings based on views and RPM.</p>
   </div>
 </section>
 
-<section class="calculator-section">
+<section>
   <div class="container">
-    <div class="card">
+    <label>Total Views:</label>
+    <input type="number" id="yt-views" placeholder="e.g. 100000">
 
-      <label>Total Views:</label>
-      <input type="number" id="ytViews" placeholder="e.g. 500000">
+    <label>Average RPM (₹):</label>
+    <input type="number" id="yt-rpm" placeholder="e.g. 150">
 
-      <label>Average RPM (₹ per 1000 views):</label>
-      <input type="number" id="ytRPM" placeholder="e.g. 150">
+    <button onclick="calculateYoutubeIncome()">Calculate</button>
 
-      <button onclick="calculateYouTube()">Calculate Income</button>
-
-      <div id="result-youtube" class="result"></div>
-
-    </div>
+    <div id="yt-result"></div>
   </div>
 </section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2>FAQs</h2>
-
-    <details>
-      <summary>What is RPM?</summary>
-      <p>RPM (Revenue Per Mille) is how much you earn per 1000 views after YouTube cuts.</p>
-    </details>
-
-    <details>
-      <summary>What affects RPM?</summary>
-      <p>Your niche, country, audience type, and advertiser demand affect RPM.</p>
-    </details>
-
-    <details>
-      <summary>Is this income before or after YouTube's cut?</summary>
-      <p>This calculator shows your earnings after YouTube takes its 45% cut.</p>
-    </details>
-
-  </div>
-</section>
-
-<footer id="contact">
+<footer>
   <div class="container">
     <p>&copy; 2025 Onley | All Rights Reserved</p>
     <p>Contact: onleyhelp@gmail.com</p>
