@@ -902,3 +902,52 @@ ul {
         gap: 1rem;
     }
 }
+/* BMI Specific Styles */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-unit {
+    background-color: var(--light-gray);
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-left: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.bmi-chart {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bmi-chart ul {
+    margin-top: 1rem;
+}
+
+.bmi-chart li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.bmi-category {
+    font-weight: 600;
+}
+
+.bmi-category.underweight {
+    color: #ffc107;
+}
+
+.bmi-category.normal {
+    color: #28a745;
+}
+
+.bmi-category.overweight {
+    color: #fd7e14;
+}
+
+.bmi-category.obese {
+    color: #dc3545;
+}
