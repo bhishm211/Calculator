@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AC Bill Calculator - Onley</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Calculate your AC electricity bill easily with Onley AC Bill Calculator. Save money by knowing how much your AC consumes.">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <h1>Onley</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>AC Bill Calculator</h2>
+    <p>Check how much electricity your AC consumes monthly or yearly.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container">
+    <div class="card">
+
+      <label>Select AC Brand:</label>
+      <select id="brand">
+        <option value="Generic">Generic</option>
+        <option value="LG">LG</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Voltas">Voltas</option>
+        <option value="Daikin">Daikin</option>
+      </select>
+
+      <label>AC Capacity (Tons):</label>
+      <input type="range" min="0.8" max="2" step="0.1" value="1.5" id="capacity" oninput="document.getElementById('capVal').innerHTML=this.value + ' Ton'">
+      <div><b>Selected:</b> <span id="capVal">1.5 Ton</span></div>
+
+      <label>Star Rating:</label>
+      <div class="stars">
+        <button onclick="setStar(1)">★</button>
+        <button onclick="setStar(2)">★★</button>
+        <button onclick="setStar(3)">★★★</button>
+        <button onclick="setStar(4)">★★★★</button>
+        <button onclick="setStar(5)">★★★★★</button>
+      </div>
+
+      <label>Hours Per Day:</label>
+      <input type="number" id="hours" placeholder="e.g. 8">
+
+      <label>Number of Days:</label>
+      <input type="number" id="days" placeholder="e.g. 30">
+
+      <label>Electricity Rate (₹/Unit):</label>
+      <input type="number" id="rate" placeholder="e.g. 8">
+
+      <button onclick="calculateAC()">Calculate Bill</button>
+
+      <div id="result-ac" class="result"></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>FAQs</h2>
+
+    <details>
+      <summary>How do I calculate AC electricity bill?</summary>
+      <p>Use this calculator by entering AC capacity, hours of usage, days, and electricity rate.</p>
+    </details>
+
+    <details>
+      <summary>What is the best temperature to save electricity?</summary>
+      <p>Maintain 24-26°C for optimal savings.</p>
+    </details>
+
+    <details>
+      <summary>Is Inverter AC better than normal AC?</summary>
+      <p>Yes, inverter AC saves 30-40% more power.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
