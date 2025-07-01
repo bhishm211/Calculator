@@ -1,111 +1,167 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    const themeIcon = document.querySelector('.theme-icon');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-    
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-    
-    function updateThemeIcon(theme) {
-        themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
-    }
-    
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.main-nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenuToggle.classList.remove('active');
-            mainNav.classList.remove('active');
-        });
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Scroll animation for elements
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.calculator-card, .blog-card');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.calculator-card, .blog-card');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    // Run once on page load
-    animateOnScroll();
-    
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Calculator form validation
-    const calculatorForms = document.querySelectorAll('.calculator-form');
-    if (calculatorForms) {
-        calculatorForms.forEach(form => {
-            const numberInputs = form.querySelectorAll('input[type="number"]');
-            
-            numberInputs.forEach(input => {
-                input.addEventListener('input', function() {
-                    if (this.value < 0) {
-                        this.value = 0;
-                    }
-                });
-            });
-        });
-    }
-    
-    // Set current year in footer
-    const currentYear = new Date().getFullYear();
-    const yearElement = document.querySelector('.footer-bottom p');
-    if (yearElement) {
-        yearElement.innerHTML = yearElement.innerHTML.replace('2023', currentYear);
-    }
-});
+// 🌙 Theme Toggle
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  const current = localStorage.getItem('theme');
+  if (current === 'dark') {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Apply theme on load
+window.onload = () => {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+  }
+};
+
+// ==========================
+// 🔥 AC Bill Calculator
+function calculateACBill() {
+  const power = parseFloat(document.getElementById('ac-power').value);
+  const hours = parseFloat(document.getElementById('ac-hours').value);
+  const days = parseFloat(document.getElementById('ac-days').value);
+  const rate = parseFloat(document.getElementById('ac-rate').value);
+
+  if (isNaN(power) || isNaN(hours) || isNaN(days) || isNaN(rate)) {
+    alert('Please fill all the fields correctly.');
+    return;
+  }
+
+  const units = (power * hours * days) / 1000;
+  const bill = units * rate;
+
+  document.getElementById('ac-result').innerHTML = 
+    `Total Units: <b>${units.toFixed(2)} kWh</b><br>
+     Estimated Bill: <b>₹${bill.toFixed(2)}</b>`;
+}
+
+// ==========================
+// 🔥 EMI Calculator
+function calculateEMI() {
+  const loan = parseFloat(document.getElementById('emi-loan').value);
+  const rate = parseFloat(document.getElementById('emi-rate').value) / 12 / 100;
+  const months = parseFloat(document.getElementById('emi-months').value);
+
+  if (isNaN(loan) || isNaN(rate) || isNaN(months)) {
+    alert('Please fill all the fields correctly.');
+    return;
+  }
+
+  const emi = (loan * rate * Math.pow(1 + rate, months)) /
+              (Math.pow(1 + rate, months) - 1);
+  const total = emi * months;
+  const interest = total - loan;
+
+  document.getElementById('emi-result').innerHTML =
+    `Monthly EMI: <b>₹${emi.toFixed(2)}</b><br>
+     Total Payment: <b>₹${total.toFixed(2)}</b><br>
+     Total Interest: <b>₹${interest.toFixed(2)}</b>`;
+}
+
+// ==========================
+// 🔥 BMI Calculator
+function calculateBMI() {
+  const weight = parseFloat(document.getElementById('bmi-weight').value);
+  const height = parseFloat(document.getElementById('bmi-height').value) / 100;
+
+  if (isNaN(weight) || isNaN(height)) {
+    alert('Please fill all the fields correctly.');
+    return;
+  }
+
+  const bmi = weight / (height * height);
+  let status = '';
+
+  if (bmi < 18.5) status = 'Underweight';
+  else if (bmi < 24.9) status = 'Normal';
+  else if (bmi < 29.9) status = 'Overweight';
+  else status = 'Obese';
+
+  document.getElementById('bmi-result').innerHTML =
+    `Your BMI: <b>${bmi.toFixed(1)}</b> (<b>${status}</b>)`;
+}
+
+// ==========================
+// 🔥 Fuel Cost Calculator
+function calculateFuel() {
+  const distance = parseFloat(document.getElementById('fuel-distance').value);
+  const mileage = parseFloat(document.getElementById('fuel-mileage').value);
+  const price = parseFloat(document.getElementById('fuel-price').value);
+
+  if (isNaN(distance) || isNaN(mileage) || isNaN(price)) {
+    alert('Please fill all the fields correctly.');
+    return;
+  }
+
+  const fuel = distance / mileage;
+  const cost = fuel * price;
+
+  document.getElementById('fuel-result').innerHTML =
+    `Fuel Needed: <b>${fuel.toFixed(2)} Liters</b><br>
+     Estimated Cost: <b>₹${cost.toFixed(2)}</b>`;
+}
+
+// ==========================
+// 🔥 Age Calculator
+function calculateAge() {
+  const dob = new Date(document.getElementById('age-dob').value);
+  const today = new Date();
+
+  if (!dob || dob == 'Invalid Date') {
+    alert('Please select a valid Date of Birth.');
+    return;
+  }
+
+  let years = today.getFullYear() - dob.getFullYear();
+  let months = today.getMonth() - dob.getMonth();
+  let days = today.getDate() - dob.getDate();
+
+  if (days < 0) {
+    months--;
+    days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+  }
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  document.getElementById('age-result').innerHTML =
+    `Your Age: <b>${years} Years, ${months} Months, ${days} Days</b>`;
+}
+
+// ==========================
+// 🔥 Pregnancy Due Date Calculator
+function calculatePregnancy() {
+  const lmp = new Date(document.getElementById('pregnancy-lmp').value);
+
+  if (!lmp || lmp == 'Invalid Date') {
+    alert('Please select a valid Last Menstrual Period date.');
+    return;
+  }
+
+  const dueDate = new Date(lmp);
+  dueDate.setDate(dueDate.getDate() + 280);
+
+  document.getElementById('pregnancy-result').innerHTML =
+    `Estimated Due Date: <b>${dueDate.toDateString()}</b>`;
+}
+
+// ==========================
+// 🔥 YouTube Income Calculator
+function calculateYoutubeIncome() {
+  const views = parseFloat(document.getElementById('yt-views').value);
+  const rpm = parseFloat(document.getElementById('yt-rpm').value);
+
+  if (isNaN(views) || isNaN(rpm)) {
+    alert('Please fill all the fields correctly.');
+    return;
+  }
+
+  const income = (views / 1000) * rpm;
+
+  document.getElementById('yt-result').innerHTML =
+    `Estimated Earnings: <b>₹${income.toFixed(2)}</b>`;
+}
