@@ -1,208 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator - Onley</title>
-    <meta name="description" content="Calculate your Body Mass Index (BMI) with our free BMI Calculator. Understand your weight category and health risks.">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator – Onley</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Check your BMI using Onley's free BMI Calculator.">
 </head>
+
 <body>
-    <!-- Sticky Header (same as index.html) -->
-    <header class="sticky-header">
-        <!-- Same header content as index.html -->
-    </header>
 
-    <!-- Calculator Hero -->
-    <section class="calculator-hero">
-        <div class="container">
-            <h1>BMI Calculator</h1>
-            <p>Calculate your Body Mass Index and understand your weight category</p>
-        </div>
-    </section>
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Onley Logo">
+      <h1>Onley</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculators.html" class="active">Calculators</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
 
-    <!-- Calculator Section -->
-    <section class="calculator-section section-padding">
-        <div class="container">
-            <div class="calculator-container">
-                <div class="calculator-form">
-                    <div class="form-group">
-                        <label for="height">Height</label>
-                        <div class="input-group">
-                            <input type="number" id="height" class="form-control" min="100" max="250" placeholder="170">
-                            <span class="input-unit">cm</span>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="weight">Weight</label>
-                        <div class="input-group">
-                            <input type="number" id="weight" class="form-control" min="30" max="300" placeholder="70">
-                            <span class="input-unit">kg</span>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" id="age" class="form-control" min="2" max="120" placeholder="30">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" class="form-control">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-                    
-                    <button id="calculate-btn" class="cta-button">Calculate BMI</button>
-                    <button id="reset-btn" class="secondary-button">Reset</button>
-                </div>
-                
-                <div class="calculator-results">
-                    <h3>Your BMI Results</h3>
-                    <div class="result-item">
-                        <span class="result-label">BMI Score:</span>
-                        <span id="bmi-score" class="result-value">0</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Weight Category:</span>
-                        <span id="bmi-category" class="result-value">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Healthy Weight Range:</span>
-                        <span id="healthy-range" class="result-value">-</span>
-                    </div>
-                    
-                    <div class="bmi-chart">
-                        <h4>BMI Categories</h4>
-                        <ul>
-                            <li><span class="bmi-category underweight">Underweight</span>: BMI less than 18.5</li>
-                            <li><span class="bmi-category normal">Normal weight</span>: BMI 18.5 - 24.9</li>
-                            <li><span class="bmi-category overweight">Overweight</span>: BMI 25 - 29.9</li>
-                            <li><span class="bmi-category obese">Obese</span>: BMI 30 or greater</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="savings-tips">
-                        <h4>BMI Health Information</h4>
-                        <p>BMI is a screening tool that may indicate health risks. Consult a healthcare provider for assessment.</p>
-                        <a href="../blog2.html" class="read-more">Read our BMI health guide</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="calculator-info">
-                <h3>About BMI Calculation</h3>
-                <p>Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters. BMI screens for weight categories that may lead to health problems.</p>
-                
-                <h4>BMI Formula</h4>
-                <p>The formula for BMI is:</p>
-                <p><strong>BMI = weight (kg) / (height (m) × height (m))</strong></p>
-                
-                <h4>BMI Limitations</h4>
-                <p>While BMI is a useful screening tool, it has limitations:</p>
-                <ul>
-                    <li>May overestimate body fat in athletes and those with muscular builds</li>
-                    <li>May underestimate body fat in older persons and those who have lost muscle</li>
-                    <li>Does not directly measure body fat or distribution</li>
-                </ul>
-                <p>For a more comprehensive health assessment, consult a healthcare provider.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <div class="container">
+    <h2>BMI Calculator</h2>
+    <p>Check if your body weight is healthy.</p>
+  </div>
+</section>
 
-    <!-- Footer (same as index.html) -->
-    <footer class="site-footer">
-        <!-- Same footer content as index.html -->
-    </footer>
+<section>
+  <div class="container">
+    <label>Weight (kg):</label>
+    <input type="number" id="bmi-weight" placeholder="e.g. 70">
 
-    <script src="../js/script.js"></script>
-    <script>
-        // BMI Calculator Logic
-        document.addEventListener('DOMContentLoaded', function() {
-            const heightInput = document.getElementById('height');
-            const weightInput = document.getElementById('weight');
-            const ageInput = document.getElementById('age');
-            const genderSelect = document.getElementById('gender');
-            const calculateBtn = document.getElementById('calculate-btn');
-            const resetBtn = document.getElementById('reset-btn');
-            const bmiScoreElement = document.getElementById('bmi-score');
-            const bmiCategoryElement = document.getElementById('bmi-category');
-            const healthyRangeElement = document.getElementById('healthy-range');
-            
-            // Calculate function
-            function calculateBMI() {
-                const height = parseFloat(heightInput.value) || 0;
-                const weight = parseFloat(weightInput.value) || 0;
-                const age = parseInt(ageInput.value) || 0;
-                const gender = genderSelect.value;
-                
-                if (height <= 0 || weight <= 0) {
-                    alert('Please enter valid height and weight values');
-                    return;
-                }
-                
-                // Convert height from cm to m
-                const heightInMeters = height / 100;
-                
-                // Calculate BMI
-                const bmi = weight / (heightInMeters * heightInMeters);
-                
-                // Determine category
-                let category, healthyWeightMin, healthyWeightMax;
-                
-                if (bmi < 18.5) {
-                    category = 'Underweight';
-                } else if (bmi >= 18.5 && bmi < 25) {
-                    category = 'Normal weight';
-                } else if (bmi >= 25 && bmi < 30) {
-                    category = 'Overweight';
-                } else {
-                    category = 'Obese';
-                }
-                
-                // Calculate healthy weight range (BMI 18.5 to 24.9)
-                healthyWeightMin = 18.5 * (heightInMeters * heightInMeters);
-                healthyWeightMax = 24.9 * (heightInMeters * heightInMeters);
-                
-                // Display results
-                bmiScoreElement.textContent = bmi.toFixed(1);
-                bmiCategoryElement.textContent = category;
-                healthyRangeElement.textContent = `${healthyWeightMin.toFixed(1)}kg - ${healthyWeightMax.toFixed(1)}kg`;
-                
-                // Update category color
-                bmiCategoryElement.className = 'result-value bmi-category ' + 
-                    (category === 'Underweight' ? 'underweight' : 
-                     category === 'Normal weight' ? 'normal' : 
-                     category === 'Overweight' ? 'overweight' : 'obese');
-            }
-            
-            // Reset function
-            function resetCalculator() {
-                heightInput.value = '';
-                weightInput.value = '';
-                ageInput.value = '';
-                genderSelect.value = 'male';
-                
-                bmiScoreElement.textContent = '0';
-                bmiCategoryElement.textContent = '-';
-                healthyRangeElement.textContent = '-';
-                bmiCategoryElement.className = 'result-value';
-            }
-            
-            // Event listeners
-            calculateBtn.addEventListener('click', calculateBMI);
-            resetBtn.addEventListener('click', resetCalculator);
-            
-            // Calculate on Enter key
-            document.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    calculateBMI();
-                }
-            });
-        });
-    </script>
+    <label>Height (cm):</label>
+    <input type="number" id="bmi-height" placeholder="e.g. 170">
+
+    <button onclick="calculateBMI()">Calculate</button>
+
+    <div id="bmi-result"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
