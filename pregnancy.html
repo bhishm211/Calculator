@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pregnancy Due Date Calculator - Onley</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregnancy Due Date Calculator – Onley</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png">
-  <meta name="description" content="Calculate your pregnancy due date easily with Onley's Pregnancy Calculator. Get your expected delivery date instantly.">
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Calculate your estimated pregnancy due date using Onley's free tool.">
 </head>
 
 <body>
@@ -14,11 +14,12 @@
 <header>
   <div class="container">
     <div class="logo-area">
-      <img src="logo.png" alt="Logo">
+      <img src="images/logo.png" alt="Onley Logo">
       <h1>Onley</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="calculators.html" class="active">Calculators</a>
       <a href="blogs.html">Blogs</a>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </nav>
@@ -28,48 +29,22 @@
 <section class="hero">
   <div class="container">
     <h2>Pregnancy Due Date Calculator</h2>
-    <p>Find your baby's expected delivery date based on your last period.</p>
+    <p>Estimate your baby's due date based on your LMP.</p>
   </div>
 </section>
 
-<section class="calculator-section">
+<section>
   <div class="container">
-    <div class="card">
+    <label>Last Menstrual Period (LMP):</label>
+    <input type="date" id="pregnancy-lmp">
 
-      <label>First Day of Last Period:</label>
-      <input type="date" id="lmpDate">
+    <button onclick="calculatePregnancy()">Calculate</button>
 
-      <button onclick="calculatePregnancy()">Calculate Due Date</button>
-
-      <div id="result-pregnancy" class="result"></div>
-
-    </div>
+    <div id="pregnancy-result"></div>
   </div>
 </section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2>FAQs</h2>
-
-    <details>
-      <summary>How is the due date calculated?</summary>
-      <p>It's calculated by adding 280 days (40 weeks) to the first day of your last menstrual period (LMP).</p>
-    </details>
-
-    <details>
-      <summary>Is this due date always accurate?</summary>
-      <p>It provides an estimate. Actual delivery may vary by a couple of weeks earlier or later.</p>
-    </details>
-
-    <details>
-      <summary>Can I use this for IVF or other pregnancies?</summary>
-      <p>This is designed for natural conception. IVF due dates can differ slightly.</p>
-    </details>
-
-  </div>
-</section>
-
-<footer id="contact">
+<footer>
   <div class="container">
     <p>&copy; 2025 Onley | All Rights Reserved</p>
     <p>Contact: onleyhelp@gmail.com</p>
