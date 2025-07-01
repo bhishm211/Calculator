@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fuel Cost Calculator - Onley</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <meta name="description" content="Easily calculate your total fuel cost for any trip with Onley's Fuel Cost Calculator. Save money by planning better.">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo">
+      <h1>Onley</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Fuel Cost Calculator</h2>
+    <p>Calculate how much money you'll spend on fuel for your trips.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container">
+    <div class="card">
+
+      <label>Distance (in km):</label>
+      <input type="number" id="distance" placeholder="e.g. 150">
+
+      <label>Fuel Efficiency (km per litre):</label>
+      <input type="number" id="mileage" placeholder="e.g. 15">
+
+      <label>Fuel Price (₹ per litre):</label>
+      <input type="number" id="fuelPrice" placeholder="e.g. 105">
+
+      <button onclick="calculateFuel()">Calculate Fuel Cost</button>
+
+      <div id="result-fuel" class="result"></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>FAQs</h2>
+
+    <details>
+      <summary>How does the fuel cost calculator work?</summary>
+      <p>It calculates total fuel cost based on distance, mileage, and fuel price.</p>
+    </details>
+
+    <details>
+      <summary>Is it applicable for petrol, diesel, and CNG?</summary>
+      <p>Yes, enter the correct fuel price based on your vehicle.</p>
+    </details>
+
+    <details>
+      <summary>Can I use it for round trips?</summary>
+      <p>Yes, just double the distance for round trips.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p>&copy; 2025 Onley | All Rights Reserved</p>
+    <p>Contact: onleyhelp@gmail.com</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
